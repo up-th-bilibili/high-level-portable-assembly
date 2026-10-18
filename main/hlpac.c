@@ -3,7 +3,12 @@
 #include"hlpac_x86.c"
 #define HLPA_VERSION "0.0.1" /* just for programmers */
 #include"hlpac_mapping.c"
+#include<stdio.h>
 int main(int argc,char** argv){
-    puts("HLPAC are in unusable statement.");
+    if(argc<3){
+        fputs("Usage: hlpac <input-file> <options>\n",stderr);
+        return -1;
+    }
+    puts("HLPAC is in unusable state");
     return 0;
 }
