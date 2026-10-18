@@ -5,10 +5,15 @@
 #include"hlpac_mapping.c"
 #include<stdio.h>
 int main(int argc,char** argv){
-    if(argc<3){
-        fputs("Usage: hlpac <input-file> <options>\n",stderr);
+    char *input,*output=nullptr,*config=nullptr;
+    if(argc<2){
+        fputs("Usage: hlpac <input-file> [options]*\n",stderr);
         return -1;
     }
+    for(int i=2;i<argc;i++){
+        ;
+    }
+    input=argv[1];
     puts("HLPAC is in unusable state");
     return 0;
 }
