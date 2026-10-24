@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MPL-2.0
 #include"hlpac_mapping.h"
-#include<stdlib.h>
 HLPAMapping* hlpac_mapping_new(){
     return malloc(sizeof(HLPAMapping));
 }

@@ -3,6 +3,10 @@
 #define HLPAC_STRUCTURES_H
 #include<stddef.h>
 #include<stdint.h>
+#include<stdio.h>
+#include<string.h>
+#include<errno.h>
+#include<stdlib.h>
 typedef enum:uint16_t{
     FUNCTION,
     SECTION,
@@ -158,10 +162,4 @@ typedef struct{
     uint32_t pointer_to_arguments;
     uint32_t pointer_to_typings;
 }FunctionNode;
-typedef struct{
-    void* bin;
-    HLPAMapping relocate_table_all_section;
-    HLPAMapping symbol_table_all_section;
-    HLPAMapping symbol_table_disp;
-}HLPABuildTable;
 #endif

@@ -3,8 +3,7 @@
 #include"hlpac_x86.c"
 #define HLPA_VERSION "0.0.1" /* just for programmers */
 #include"hlpac_mapping.c"
-#include<stdio.h>
-#include<string.h>
+#include"hlpac_hlpa_parser.c"
 int main(int argc,char** argv){
     char *input,*output=nullptr,*config=nullptr;
     if(argc<2){
@@ -39,6 +38,7 @@ int main(int argc,char** argv){
     }
     input=argv[1];
     size_t string_size;
+    uint8_t *hlpa_binary_structure;
     if((string_size=strlen(input))<6||*(input+string_size-6)=='/'||*(input+string_size-6)=='\\'){
         fputs("Exception: unsupport input file.\n",stderr);
         return -1;
