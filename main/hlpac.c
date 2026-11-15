@@ -4,6 +4,7 @@
 #define HLPA_VERSION "0.0.1" /* just for programmers */
 #include"hlpac_mapping.c"
 #include"hlpac_hlpa_parser.c"
+#include"hlpac_functions.c"
 int main(int argc,char** argv){
     char *input,*output=nullptr,*config=nullptr;
     if(argc<2){

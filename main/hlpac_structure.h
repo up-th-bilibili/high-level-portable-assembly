@@ -28,7 +28,9 @@ typedef enum:uint16_t{
     RET,
     LITERAL,
     REG_LABEL,
-    RAW_AT_MACHINE
+    RAW_AT_MACHINE,
+    RET_CALL,
+    TEXT_FROM_ONLYS
 }HLPAASTTypes;
 typedef enum:uint16_t{
     UNSETTING,
