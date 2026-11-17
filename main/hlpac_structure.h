@@ -164,4 +164,9 @@ typedef struct{
     uint32_t pointer_to_arguments;
     uint32_t pointer_to_typings;
 }FunctionNode;
+typedef struct{
+    size_t size;
+    uint8_t* bytes;
+    size_t start_elem;
+}BHPAData;
 #endif

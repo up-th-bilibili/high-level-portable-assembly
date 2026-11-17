@@ -39,17 +39,21 @@ int main(int argc,char** argv){
     }
     input=argv[1];
     size_t string_size;
-    uint8_t *hlpa_binary_structure;
+    BHPAData hlpa_binary_structure;
     if((string_size=strlen(input))<6||*(input+string_size-6)=='/'||*(input+string_size-6)=='\\'){
         fputs("Exception: unsupport input file.\n",stderr);
         return -1;
     }
     if(!strcmp(input+string_size-5,".hlpa")){
-        ; // TODO: 读取hlpa并解析后处理为同bhpa的内存结构
+        hlpa_binary_structure=hlpac_hlpa_parser(input);
     }else if(!strcmp(input+string_size-5,".bhpa")){
-        ; // TODO: 读取bhpa并处理为内存结构
+        hlpa_binary_structure; // TODO: 读取bhpa并处理为内存结构
     }else{
         fputs("Exception: unsupport input file.\n",stderr);
+        return -1;
+    }
+    if(!hlpa_binary_structure.bytes){
+        fputs("Exception: no memory.",stderr);
         return -1;
     }
     puts("HLPAC is in unusable state");
