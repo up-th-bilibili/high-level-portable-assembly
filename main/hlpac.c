@@ -47,7 +47,7 @@ int main(int argc,char** argv){
     if(!strcmp(input+string_size-5,".hlpa")){
         hlpa_binary_structure=hlpac_hlpa_parser(input);
     }else if(!strcmp(input+string_size-5,".bhpa")){
-        hlpa_binary_structure; // TODO: 读取bhpa并处理为内存结构
+        hlpa_binary_structure=hlpac_bhpa_handler(input);
     }else{
         fputs("Exception: unsupport input file.\n",stderr);
         return -1;
